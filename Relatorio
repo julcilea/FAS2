@@ -1,0 +1,177 @@
+IEC - PUC Minas
+Engenharia de Software - Oferta 27
+Fundamentos de Arquitetura de Software 2
+Julciléa Bolandini
+Thamiris Ferreira Louro
+
+
+Relatório Técnico - Visual Studio Test Professional
+
+Louro, Thamiris. Bolandini, Julciléa.
+Instituto de Educação Continuada - Pontifícia Universidade Católica de Minas Gerais
+thamiris.louro@gmail.com, julcilea@gmail.com
+
+Abstract: 
+
+Resumo:
+
+
+1. Visual Studio Test Professional
+
+O Visual Studio Test Professional (VSTP) é um conjunto de ferramentas da Microsoft que oferece várias funcionalidades para o planejamento, gerenciamento, execução e automatização dos testes, cobrindo assim todo o processo de testes. Oferece recursos para centralizar e compartilhar a documentação de testes como Plano de Testes, Casos de Teste, resultados dos testes, relatórios, entre outros. Tudo isso de forma integrada com a equipe de desenvolvimento.
+Este pacote é composto pelas ferramentas Microsoft Test Manger, Visual Studio, Visual Studio Team Fundation Server e o Visual Studio Lab Management.
+A Test Manager é baseada em Planos de Tetes e Casos de teste e pode executar os testes automatizados que são criados pelo Visual Studio.
+O Visual Studio apresenta os seguintes modelos de projeto de teste:
+Projeto de Teste unitário – pode incluir testes de unidade, teste de terceiros testes de unidade, ordenados, e teste genéricos.
+Projeto de teste de Interface de Usuário codificado – Pode incluir os tipos de teste listados para Projeto de teste da unidade e testes codificados de interface do usuário.
+Projeto de teste de carga e desempenho na Web – pode incluir teste de desempenho da Web e teste de carregamento.
+1. Descrição de Arquitetura
+
+1.1 Requerimentos de sistema
+Sistemas operacionais compatíveis
+Windows 7 SP1 (x86 e x64)
+Windows 8 (x86 e x64)
+Windows Server 2008 R2 SP1 (x64)
+Windows Server 2012 (x64)
+Arquiteturas compatíveis
+32-bit (x86)
+64-bit (x64)
+Requisitos de hardware
+Processador de 1.6 GHz ou mais rápido
+1 GB de RAM (1,5 GB se operar em uma máquina virtual) ou mais
+10 GB de espaço em disco disponível ou mais
+Disco rígido de 5400 RPM
+Placa de vídeo compatível com DirectX 9 operando a uma resolução de 1024 x 768 ou superior
+
+
+2. Descrição de procedimentos de avaliação
+
+2.1 Conceitos avaliados
+
+2.1.1 Automatização de testes funcionais
+
+Após o ciclo de execução dos testes funcionais e correção dos bugs encontrados, é gerada uma versão estável do sistema, ou seja, uma versão que não possui bug impeditivos e que permite a execução das principais funcionalidades do sistema. Durante o planejamento do projeto e dos testes é definida a necessidade da automatização dos testes. Isto vai depender do risco de necessidade de manutenção do projeto, do tempo disponível e do custo da automatização. O custo para automatização de testes ainda é muito alto e deve ser analisado considerando-se os benefícios que o mesmo pode trazer.
+
+Algumas vezes o sistema não possui documentação e não é possível gerar os casos de teste, outras vezes não há tempo para a criação dos casos de teste e nestes casos a melhor opção é o Teste Exploratório. 
+
+Para a automatização dos testes funcionais, seja exploratório ou scripted, são considerados os seguintes aspectos:
+
+Gravação de testes exploratórios: Execução de teste funcional sem o roteiro do caso de teste. Será verificado se a ferramenta captura corretamente as ações executadas, como por exemplo o preenchimento de campos texto, radio button, combo box, entre outros. 
+
+Tratamento de bugs encontrados: Será verificado também o comportamento da ferramenta ao encontrar um erro no teste exploratório: se será possível parar a gravação dos testes, se será possível alterar o código gerado, e se será possível executar o teste corretamente.
+
+Alterar o script gerado pelo teste exploratório: Após a manutenção de um sistema, como por exemplo a mudança de um requisito, verificar a possibilidade de alteração no script gerado pelo teste exploratório.
+
+Criação de caso de teste a partir da automatização do teste exploratório: Será verificado se existe a possibilidade de criar os casos de teste com base nos scripts gerados no teste exploratório. Esta funcionalidade pode ser importante pra casos em que o projeto necessite dos casos de teste para alguma validação do usuário, uma vez que os casos de teste estão mais próximos da linguagem do usuário do que o código gerado.
+
+Gravação de testes scripteds: Depois de ter todos os casos de testes criados, verificar o grau de fidelidade da gravação dos testes e se todas as saídas esperadas descritas nos casos são possíveis de serem verificadas, como por exemplo: exibição de telas, exibição de mensagens, mudança no estado de comandos, mudança de valores dos campos, entre outros. Verificar aqui também se o preenchimento de campos texto, combo box, radio button, etc são feitos de forma correta e repetitível.
+
+Duplicar casos de teste: A possibilidade de copiar e colar um caso de teste para posteriormente alterar apenas o nome e alguns passos agiliza no processo de elaboração de casos de testes, e consequentemente pode agilizar na gravação dos testes.
+
+Reaproveitar scripts: Muitas vezes os casos de teste são parecidos, mudando apenas uma entrada do usuário e uma saída esperada. Sendo assim, a ferramenta deve possibilitar a duplicação dos scripts gerados por um caso de teste para que o mesmo seja reutilizado (com as devidas alterações) em outro caso de teste.
+
+Massa de dados diferentes (teste orientado a dados): Muitas vezes o sistema não permite a gravação de dois usuários com o mesmo CPF, por exemplo. Sendo assim, a ferramenta deverá ser capaz de mudar os dados de teste a cada execução dos scripts.
+
+Integração com outras ferramentas: Ferramentas open source como  o Mantis e o Bugzilla são amplamente utilizadas no mercado. Será verificado se existe a possibilidade de integração destas ferramentas.
+
+Estabilidade da ferramenta: Verificar se a ferramenta se comporta de forma estável, não apresentando erros e travamentos. 
+
+Ambiente: Verificar se é possível criar ambientes isolados e diferenciados para a execução dos testes. Este requisito possibilista reproduzir os vários ambiente em que a aplicação poderá ser executada.
+
+Usabilidade: Durante todas as funcionalidades exercitadas, analisar a usabilidade da ferramenta. Esta deve ser intuitiva e deve prover todas as informações necessárias para a execução das atividades.
+
+Facilidade de instalação: Verificar se a ferramenta é de fácil instalação, se necessita de mais alguma ferramenta para a execução dos testes a serem feitos.
+
+Controle de acesso: Verificar como a ferramenta gerencia o controle de acessos de controladores de testes e agentes de teste. 
+
+
+2.2 Procedimento executado para os testes scripted
+
+A ferramenta Visual Studio Test Professional (VSTP) foi baixada no endereço <http://www.microsoft.com/visualstudio/eng/downloads #d-test-professional> e instalada. 
+Antes da execução da automatização dos teste em si, foi necessário a criação de um usuário no Microsoft Team Fundation Server (https://tfs.app.visualstudio.com/_account/Signup). 
+Com o usuário cadastrado, foi criado um projeto de nome TesteIECFAS2.
+Foram criados os casos de teste iniciais.
+
+2.2.1 Teste scripted
+
+Para o projeto TesteIECFAS2 foi criado um plano de teste com o nome Plano de Teste FAS2. 
+Com o Projeto e o Plano de Teste criados, foram criados alguns casos de teste para exemplo. É importante destacar que é possível criar um caso de teste diretamente dentro do plano de teste ou dentro do projeto, podendo ser adicionado ao plano de teste posteriormente.
+Foram criados caso de testes iniciais para a gravação dos testes scripted (Incluir aluno com sucesso, Incluir aluno já cadastrado, Incluir aluno com campos obrigatórios em branco e Incluir Publicação com sucesso).
+A aplicação foi iniciada através do NetBeans utilizando um servidor GlasFish e banco de dados Java DB. A aplicação foi desenvolvida em Java Web, JSF e hibernate.
+A aplicaçao foi iniciada no Internet Explorer 10 para a execução dos casos de teste.
+Antes de startar a execução dos testes (Start Test), o checkbox para gravação das ações (Create action recording) deve ser selecionado para que posteriormente seja utilizado na automatização dos testes.
+A medida que os passos foram executados na aplicação, os mesmos foram marcados como pass/fail no caso de teste. Durante esta execução, o teste pode ser pausado, e podem ser relatados bugs.
+Após o término da execução, os testes foram salvos.
+Na ferramenta Visual Studio Ultimate foi criado um novo projeto (New -> Project -> Test -> Coded UI Test Project) e foi selecionada a opção “Use an existing action recordin” para que o teste gravado anteriormente na ferramenta Test Manger seja utilizado. Selecionada esta opção, o Visual Studio exibe uma nova janela para que seja selecionado o caso de teste que servirá como base para a criação do teste codificado da interface.
+Para a execução do teste automatizado, na ferramenta Test Manager, clicamos com o botão direito do mouse sobre o caso de teste e selecionamos a opção Run (sem selecionar o checkbox Overwrite action recording) e Start Test. Através do comando Play é possível executar os testes.
+
+2.3 Procedimento executado para os testes exploratórios
+
+A ferramenta Visual Studio Test Professional (VSTP) foi baixada no endereço <http://www.microsoft.com/visualstudio/eng/downloads #d-test-professional> e instalada. 
+Antes da execução da automatização dos teste em si, foi necessário a criação de um usuário no Microsoft Team Fundation Server (https://tfs.app.visualstudio.com/_account/Signup). 
+Com o usuário cadastrado, foi criado um projeto de nome TesteIECFAS2.
+
+2..3.1 Teste exploratório
+
+Para execução de testes exploratórios iniciou-se o Test Manager como teste exploratório, a ferramenta fica aguardando, no canto esquerdo da tela, a abertura da aplicação.
+A aplicação foi iniciada através do NetBeans utilizando um servidor GlasFish e banco de dados Java DB. A aplicação foi desenvolvida em Java Web, JSF e hibernate.
+A aplicação foi iniciada no Internet Explore 10 para a execução dos casos de teste. 
+Antes de iniciar os testes exploratórios deve-se iniciar a gravação dos testes 
+Na ferramenta Test Manager foi selecionada a opção Test -> Do exploratory testing -> Explore.
+Os testes foram executados na aplicação e gravados.
+
+
+2.2.3 Considerações sobre cada aspecto avaliado
+
+Gravação de testes exploratórios: A ferramenta possibilista examinar os recursos exploratório de teste do aplicativo sem um conjunto de testes definidos com antecedência, e sem um script de etapas predeterminadas. A ferramenta captura corretamente as ações executadas, como por exemplo o preenchimento de campos texto, radio button, combo box, entre outros.
+
+Tratamento de bugs encontrados: Verificando o comportamento da ferramenta ao encontrar um erro no teste exploratório: se é possível parar a gravação dos testes, se é possível alterar o código gerado, e se será possível executar o teste corretamente.
+Criar novos bugs e casos de teste a partir de uma sessão de teste exploratória é um exemplo de um fluxo de trabalho comum, nesta ferramenta os usuários podem também abrir e atualizar bugs e casos de teste manuais existente.
+Verificamos que enquanto estiver executando a sessão de testes exploratória, testadores podem  criar dados adicionais para os erros na forma de imagens, comentários e anexos de arquivo.
+ 
+Tratamento de bugs encontrados:Verificando também o comportamento da ferramenta ao encontrar um erro no teste exploratório: se será possível parar a gravação dos testes, se será possível alterar o código gerado, e se será possível executar o teste corretamente.
+
+Alterar o script gerado pelo teste exploratório:  Muitas vezes os casos de teste são parecidos, mudando apenas uma entrada do usuário e uma saída esperada. Sendo assim, analizamos a ferramenta quanto a duplicação dos scripts gerados por um caso de teste para que o mesmo seja reutilizado (com as devidas alterações) em outro caso de teste.
+Verificamos que durante a criação do coded UI test não é possível visualizar o teste exploratório, sendo exibido somente os casos de testes gerados.
+ 
+Criação de caso de teste a partir da automatização do teste exploratório: O Visual Studio test Manager somente grava os testes exploratórios e executa os testes automatizados. A criação dos casos de teste automatizados com base nos scripts gerados no teste exploratório é possível na ferramenta Visual Studio Ultimate, ou seja, é preciso inicialmente gravar os testes com o Visual Studio test Manager abrir as gravações no Visual Studio Ultimate para gerar a automação dos testes e voltar ao Visual Studio test Manager para executar os testes automatizados.
+ 
+Gravação de testes scripteds: Depois de ter todos os casos de testes criados, ao analisar o grau de fidelidade da gravação dos testes e se todas as saídas esperadas descritas nos casos são possíveis de serem verificadas, como por exemplo: exibição de telas, exibição de mensagens, mudança no estado de comandos, mudança de valores dos campos, entre outros. Verificamos que o preenchimento de campos texto, combo box, radio button, etc são feitos de forma correta e repetitível. os testes foram gravados apresentando no script todos os paramentos cadastrados anteriormente no caso de teste executado.
+ 
+Duplicar casos de teste: A possibilidade de copiar e colar um caso de teste para posteriormente alterar apenas o nome e alguns passos agiliza no processo de elaboração de casos de testes, e consequentemente pode agilizar na gravação dos testes. Com a ferramenta analisada não foi identificada esta funcionalidade. A cópia de um caso de teste é possível somente com a utilização de “crtl + c” e “ctrl + v”.
+ 
+Reaproveitar scripts: O reaproveitamento dos scripts gerados é possível com a utilização de “crtl + c” e “ctrl + v”. A cópia pode ser alterada para que sejam realizado outros testes.
+ 
+Massa de dados diferentes: A classe TestContext é usada para armazenar os dados utilizados nos testes unitários. (??)
+ 
+Integração com outras ferramentas: Analisando se existe a possibilidade de integração de outras ferramentas com o visual Studio test Manager, verificamos que é possível integrar o Visual Studio com a ferramenta Eclipse. Para esta integração é utilizada a conta do Team Foundation Server e instalar um plugin do eclipse. Quanto a ferramentas open source como o Mantis e o Bugzilla que são amplamente utilizadas no mercado o visual Studio não faz integração.
+Foi possível perceber que o grupo de ferramentas do Visual Studio integra quase que exclusivamente com ferramentas da própria empresa, Microsoft, e nào é possível a integração com ferramentas de outros fornecedores.
+
+Estabilidade da ferramenta: Verificando se a ferramenta se comporta de forma estável, não apresentando erros e travamentos, notamos que a ferramenta não apresentou falhas durante os testes realizados, tendo seu funcionamento de forma aceitável. Após instalação não apresentou lentidão durante o processamento dos testes executados.
+ 
+Ambiente: É possível criar ambientes de laboratório para execução de teste e executar testes em ambientes locais. Um ambiente de laboratório é uma coleção de computadores virtuais e físicos, que você pode usar para desenvolver e aplicativos de teste. Um ambiente de laboratório pode conter várias funções necessárias para testar aplicativos com camadas múltiplas, como estações de trabalho, web server, e servidores de banco de dados. 
+Há dois tipos dos ambientes: padrão e ambientes de SCVMM. Um ambiente padrão pode usar computadores físicos ou máquinas virtuais, e as máquinas virtuais podem executar em qualquer estrutura de virtualização. Um ambiente de SCVMM usa somente as máquinas virtuais que são gerenciadas pelo centro Virtual Machine Manager (SCVMM) do sistema.
+O Microsoft Test Manager pode ser usado para configurar ambos os tipos de ambiente. No casos de um ambiente de SCVMM, você pode parar e iniciar os ambientes de armazenamento em uma biblioteca, e criar várias cópias deles.
+Um ambiente de laboratório pode ser usado para obter os seguintes benefícios:
+− Utilizar um plano de teste para executar testes automatizados - você pode executar uma coleção de testes automatizados, chamando um plano de teste, e exibindo o progresso usando o gerenciador de teste da Microsoft.
+− Utilizar um fluxo de trabalho de construção/implantação de teste - para testar automaticamente aplicativos com camadas múltiplas. Um exemplo típico é um fluxo de trabalho que inicie uma compilação, implantar os arquivos de compilação em computadores apropriadas em um ambiente de laboratório e em seguida, executar testes automatizados. Além disso,é possível agendar o fluxo de trabalho para executar em intervalos específicos.
+− Coletar dados diagnóstico de todos os computadores -  mesmo durante testes manuais você pode coletar dados diagnóstico de vários computadores simultaneamente.
+
+Usabilidade: O Visual Studio teste não é de fácil utilização, também não é intuitivo necessitando de um tutorial ou manual da ferramenta para a execução dos testes propostos. 
+O Fato de precisar da instalação de várias outras ferramentas da Microsoft dificulta a execução dos testes, bem como o entendimento dos procedimentos a serem executados.
+ 
+Facilidade de instalação: A Ferramenta Visual Studio Test Manager é de fácil instalação. Mas foi necessário instalar o Visual Studio Ultimate e o Visual Studio pra que a execução dos requisitos propostos fossem concluídos. E ao instalar estas duas outras ferramentas complementares foi imposto, como pré requisito para o funcionamento, que fosse intalada a versão 10 do Internet Explorer.
+A ferramenta não possui portabilidade para outros sistemas operacionais. 
+
+Controle de acesso: O controle de acesso é possível através do registro do controlador de testes utilizando o Team Foundation Server, desta forma é possivel então gerenciar o controlador e agentes usando Microsoft Test Manager. É possível também, gerenciar o controlador de testes e o agentes de teste com a instalação do Visual Studio.
+
+
+
+2.3 Considerações finais
+
+O Visual Studio Test Professional oferece um pacote completo para testes. Possui muitas vantagens, dentre elas, a possibilidade de manter um projeto de teste desde a elaboração do plano de testes até a automatização do mesmo. 
+Porém não executa todo o processo de testes sozinho, é necessária a instalação de quase todo o pacote Visual Studio para realizar todo o processo analisado. O acesso a muitas ferramentas diferentes dificulta a execução do processo de testes, se fosse realizado de forma unificada, em apenas uma ferramenta, teria maior usabilidade. 
+A instalação de todas as ferramentas necessárias somente é perceptível durante a execução dos tutoriais, ou seja, durante o processo de utilização do software é preciso parar, baixar a nova ferramenta exigida, instalar, descobrir qual o funcionamento correto e a integração desta ferramenta com as outras já instaladas. Este procedimento causa prejuízo na agilidade da execução das tarefas.
+As ferramentas da Microsoft integram muito bem entre si, mas não possibilista a integração como ferramentas de outros fabricantes, a integração das ferramentas é importante para garantir a melhoria contínua da qualidade do software.
+
+
